@@ -12,6 +12,9 @@ List.prototype.add = function(note) {
 
 List.prototype.printlist = function() {
   for (i=0; i < this.array.length; i++){
-    console.log(this.array[i].text);
+      if (this.array[i] instanceof Note) {
+        console.log(this.array[i].text);
+      }
+      console.log(this.array[i]);
   }
 }
