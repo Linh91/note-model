@@ -18,3 +18,12 @@ List.prototype.printlist = function() {
       console.log(this.array[i]);
   }
 }
+
+List.prototype.viewList = function() {
+  var html = "";
+  for (var i =0; i < this.array.length; i++) {
+      html += "<ul><li><div>" + this.array[i]+ "</ul></li></div>";
+      console.log(html);
+  }
+
+}

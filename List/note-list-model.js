@@ -1,11 +1,3 @@
-var assert = {
-  isTrue: function(assertionToCheck) {
-    if (!assertionToCheck) {
-      throw new Error("Assertion failed: " + assertionToCheck + " is not truthy");
-    }
-  }
-};
-
 (function(exports) {
   function testList() {
     var list = new List();
@@ -13,4 +5,24 @@ var assert = {
   };
 
   testList();
+})(this);
+
+(function(exports) {
+  function testAdd() {
+    var list = new List();
+    list.add("TEXT");
+    assert.isTrue(list.array[0] === "TEXT");
+  };
+
+  testAdd();
+})(this);
+
+(function(exports) {
+  function testPrintlist() {
+    var list = new List();
+    list.add("TEXT");
+    assert.isTrue(list.array.includes ("TEXT"));
+  };
+
+  testPrintlist();
 })(this);
